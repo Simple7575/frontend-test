@@ -1,10 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Frontend Test</title>
-        <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
+<header class="header">
+    <div class="logotype_wrapper">
+        <button class="hamburger_btn">
+            <img class="hamburger_icon" src="./public/svg/hamburger-icon.svg" alt="" />
+        </button>
+        <div class="logotype_inner_wrapper">
+            <img class="logotype_icon" src="./public/svg/Logotype.svg" alt="" />
+        </div>
+        <img class="search_icon" src="./public/svg/search-icon.svg" alt="" />
+    </div>
+    <div class="sticky_container">
+        <nav class="nav close">
+            <div class="background_cover"></div>
+            <div class="side_logotype">
+                <img class="logotype_icon" src="./public/svg/Logotype.svg" alt="" />
+                <button class="close_btn">
+                    <img class="close_icon" src="./public/svg/close-icon.svg" alt="" />
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <a href="#"
+                        >Demos <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+                <li>
+                    <a href="#"
+                        >Post <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+                <li>
+                    <a href="#"
+                        >Features <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+                <li>
+                    <a href="#"
+                        >Categories <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+                <li>
+                    <a href="#"
+                        >Shop <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+                <li>
+                    <a href="#"
+                        >Buy Now <img src="./public/svg/arrow-down.svg" alt="down arrow icon"
+                    /></a>
+                    @@include("./submenu.html")
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

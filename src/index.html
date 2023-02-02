@@ -1,11 +1,31 @@
-@@include("./components/header.html")
+@@include("./components/head.html")
 
-<h1>Index</h1>
-<ul>
-    @@for (var i = 0; i < arr.length; i++) {
-    <li class="something">`+arr[i]+`</li>
-    <span>hi</span>
-    }
-</ul>
+<main class="main">
+    <div class="main_inner_wrapper">
+        @@for (var i = 0; i < posts.length; i++) {
+        <section class="post_wrapper">
+            <img
+                src="./public/image/img`+[i]+`_large.jpg"
+                alt=""
+                srcset="
+                    ./public/image/img`+[i]+`_small.jpg,
+                    ./public/image/img`+[i]+`_med.jpg   2x,
+                    ./public/image/img`+[i]+`_large.jpg 3x
+                "
+            />
+            <strong class="tag">`+posts[i].tag+`</strong>
+            <h3 class="title">`+posts[i].title+`</h3>
+            <div class="autor_wrapper">
+                <span class="creator">`+posts[i].creator+`</span>
+                <ul>
+                    <li><span>`+posts[i].createdDate+`</span></li>
+                    <li><span>`+posts[i].viewsCount+`</span></li>
+                </ul>
+            </div>
+            <p class="description">`+posts[i].description+`</p>
+        </section>
+        }
+    </div>
+</main>
 
 @@include("./components/footer.html")

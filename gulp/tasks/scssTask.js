@@ -8,16 +8,14 @@ const { src, dest } = gulp;
 const sass = gulpSass(dartSass);
 
 export function scss() {
-    return (
-        src("src/styles/**.scss")
-            .pipe(sass())
-            .pipe(
-                autoPrefixer({
-                    overrideBrowserslist: ["last 3 versions"],
-                })
-            )
-            // .pipe(csso())
-            .pipe(dest("dist"))
-            .pipe(browserSync.stream())
-    );
+    return src("src/styles/**.scss")
+        .pipe(sass())
+        .pipe(
+            autoPrefixer({
+                overrideBrowserslist: ["last 3 versions"],
+            })
+        )
+        .pipe(csso())
+        .pipe(dest("dist/styles"))
+        .pipe(browserSync.stream());
 }
