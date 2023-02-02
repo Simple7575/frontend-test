@@ -26,6 +26,7 @@
         "gulp-file-include": "^2.3.0",
         "gulp-htmlmin": "^5.0.1",
         "gulp-sass": "^5.1.0",
+        "gulp-zip": "^5.1.0",
         "sass": "^1.58.0"
     }
 }
