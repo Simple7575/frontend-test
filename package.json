@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "build": "gulp build",
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "gulp dev",
         "gulp": "gulp"
     },
     "keywords": [
@@ -18,7 +18,14 @@
     "license": "MIT",
     "devDependencies": {
         "browser-sync": "^2.27.11",
+        "del": "^7.0.0",
         "gulp": "^4.0.2",
-        "gulp-sass": "^5.1.0"
+        "gulp-autoprefixer": "^8.0.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-csso": "^4.0.1",
+        "gulp-file-include": "^2.3.0",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.58.0"
     }
 }
