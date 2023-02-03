@@ -1,7 +1,6 @@
 import gulp from "gulp";
 import browserSync from "browser-sync";
 import newer from "gulp-newer";
-// import imageMin from "gulp-imagemin";
 const { src, dest } = gulp;
 
 export function images() {
