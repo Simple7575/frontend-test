@@ -7,9 +7,10 @@ import { scss } from "./gulp/tasks/scssTask.js";
 import { server } from "./gulp/tasks/serverTask.js";
 import { images } from "./gulp/tasks/imagesTask.js";
 import { js } from "./gulp/tasks/jsTask.js";
+import { fonts } from "./gulp/tasks/fontTask.js";
 
 const { src, dest, series, parallel, watch } = gulp;
-const mainTasks = parallel(scss, html, images, js);
+const mainTasks = parallel(scss, html, images, js, fonts);
 
 function clear() {
     return deleteAsync(["dist"]);

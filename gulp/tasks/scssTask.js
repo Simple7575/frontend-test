@@ -9,7 +9,8 @@ const { src, dest } = gulp;
 const sass = gulpSass(dartSass);
 
 export function scss() {
-    return src("src/styles/**.scss")
+    // if you put here /**.scss gulp will change files order and we dont want that
+    return src(["src/styles/index.scss", "src/styles/extra.scss"])
         .pipe(sass())
         .pipe(
             autoPrefixer({
