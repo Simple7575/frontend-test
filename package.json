@@ -19,16 +19,20 @@
     "devDependencies": {
         "browser-sync": "^2.27.11",
         "del": "^7.0.0",
+        "gsap": "^3.11.4",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^8.0.0",
         "gulp-concat": "^2.6.1",
         "gulp-csso": "^4.0.1",
+        "gulp-debug": "^4.0.0",
         "gulp-file-include": "^2.3.0",
         "gulp-fonter": "^0.3.0",
         "gulp-htmlmin": "^5.0.1",
         "gulp-newer": "^1.4.0",
         "gulp-sass": "^5.1.0",
         "gulp-zip": "^5.1.0",
-        "sass": "^1.58.0"
+        "sass": "^1.58.0",
+        "webpack": "^5.75.0",
+        "webpack-stream": "^7.0.0"
     }
 }

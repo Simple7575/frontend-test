@@ -1,7 +1,10 @@
+import gsap from "gsap";
+
 const backText = document.querySelectorAll(".back_text");
 const frontText = document.querySelectorAll(".front_text");
 const cardFront = document.querySelector(".card_front");
-const cardBack = document.querySelector(".card_back");
+const slidingCard = document.querySelector(".sliding_card");
+const link = document.querySelector(".link");
 
 const backTextOptions = {
     opacity: 0,
@@ -16,25 +19,26 @@ const cardOptions = {
     ease: "linear",
 };
 
+const frontTextOptions = {
+    opacity: 1,
+    translateY: 0,
+    delay: 0.2,
+    scale: 1,
+};
+
 let tl;
 
 const cardBackMEHandler = () => {
-    tl = gsap.timeline().to(backText, backTextOptions).to(cardFront, cardOptions).to(frontText, {
-        opacity: 1,
-        translateY: 0,
-        delay: 0.2,
-    });
+    tl = gsap
+        .timeline()
+        .to(backText, backTextOptions)
+        .to(slidingCard, cardOptions)
+        .to([...frontText, link], frontTextOptions);
 };
 
 const cardBackMLHandler = () => {
     tl.reverse();
 };
 
-cardBack.addEventListener("mouseenter", cardBackMEHandler);
-
-// cardBack.addEventListener("mouseleave", cardBackMLHandler);
-
-cardFront.addEventListener("mouseenter", () => {});
-cardFront.addEventListener("mouseleave", () => {
-    tl.reverse();
-});
+cardFront.addEventListener("mouseenter", cardBackMEHandler);
+cardFront.addEventListener("mouseleave", cardBackMLHandler);
